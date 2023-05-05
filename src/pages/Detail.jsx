@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { getTodoByID } from "../redux/modules/todos.js";
 
 const Detail = () => {
   //변수 및 상수는 순서대로 읽어지므로 우선 사용할 상수를 선언함
