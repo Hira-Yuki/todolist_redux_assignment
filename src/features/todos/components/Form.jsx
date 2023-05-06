@@ -4,15 +4,17 @@ import { useDispatch } from "react-redux";
 import nextId from "react-id-generator";
 import { addTodo } from "../../../redux/modules/todos.js";
 
+const DEFUALT_TODO = {
+  title: "",
+  body: "",
+  isDone: false,
+}
+
 const Form = () => {
    // Store에 데이터를 보내주기 위한 메서드
   const dispatch = useDispatch();
   
-  const [todo, setTodo] = useState({
-    title: "",
-    body: "",
-    isDone: false,
-  });
+  const [todo, setTodo] = useState(DEFUALT_TODO);
   
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
@@ -27,12 +29,8 @@ const Form = () => {
     // 할일 데이터에 아이디를 추가한 객체를 생성함
     const newTodo = { ...todo, id };
     // 생성한 객체를 리듀서에 전달
-    dispatch(addTodo(newTodo))
-    setTodo({
-      title: "",
-      body: "",
-      isDone: false,
-    });
+    dispatch(addTodo(newTodo));
+    setTodo(DEFUALT_TODO);
   };
 
   return (

@@ -62,7 +62,7 @@ const todos = (state = initialState, action) => {
     case ADD_TODO:
       return {
         ...state,
-        todos: [...state.todos, action.payload],
+        todos: [action.payload, ...state.todos],
       };
     // 삭제 기능이 누락되어 있었기 때문에 추가함
     case DELETE_TODO:
