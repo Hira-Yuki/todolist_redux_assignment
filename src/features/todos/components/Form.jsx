@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import nextId from "react-id-generator";
 import { addTodo } from "../../../redux/modules/todos.js";
 
+// 새 할일의 초기값
 const DEFUALT_TODO = {
   title: "",
   body: "",
