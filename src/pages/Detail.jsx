@@ -11,7 +11,8 @@ const Detail = () => {
   // 조회한 데이터에서 가져온 id와 일치하는 데이터를 찾아 저장함
   const todo = todos.find((todo) => todo.id === id);
   const navigate = useNavigate();
- 
+
+
   return (
     <StContainer>
       <StDialog>
